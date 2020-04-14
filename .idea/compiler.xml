@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="oauth-resource" />
+        <module name="sso-oauth-client" />
+        <module name="utils" />
+        <module name="sso-oauth-client2" />
+        <module name="storage" />
+        <module name="prescription" />
+        <module name="reception9007" />
+        <module name="oauth-cli" />
+        <module name="oauth-server" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="oauth-cli" target="1.8" />
+      <module name="oauth-resource" target="1.8" />
+      <module name="oauth-server" target="1.8" />
+      <module name="prescription" target="1.8" />
+      <module name="reception9007" target="1.8" />
+      <module name="sso-oauth-client" target="1.8" />
+      <module name="sso-oauth-client2" target="1.8" />
+      <module name="storage" target="1.8" />
+      <module name="utils" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="oauth-cli" options="-parameters" />
+      <module name="oauth-resource" options="-parameters" />
+      <module name="oauth-server" options="-parameters" />
+      <module name="prescription" options="-parameters" />
+      <module name="reception9007" options="-parameters" />
+      <module name="sso-oauth-client" options="-parameters" />
+      <module name="sso-oauth-client2" options="-parameters" />
+      <module name="storage" options="-parameters" />
+      <module name="utils" options="-parameters" />
+    </option>
+  </component>
+</project>

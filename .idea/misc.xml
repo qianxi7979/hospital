@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/oauth-cli/pom.xml" />
+        <option value="$PROJECT_DIR$/oauth-resource/pom.xml" />
+        <option value="$PROJECT_DIR$/oauth-server/pom.xml" />
+        <option value="$PROJECT_DIR$/prescription/pom.xml" />
+        <option value="$PROJECT_DIR$/sso-oauth-client/pom.xml" />
+        <option value="$PROJECT_DIR$/sso-oauth-client2/pom.xml" />
+        <option value="$PROJECT_DIR$/utils/pom.xml" />
+        <option value="$PROJECT_DIR$/storage/pom.xml" />
+        <option value="$PROJECT_DIR$/reception9007/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+</project>

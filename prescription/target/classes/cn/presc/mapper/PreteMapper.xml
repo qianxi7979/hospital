@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.presc.mapper.PreteMapper">
+
+    <resultMap id="info" type="cn.presc.entity.Pretemplate">
+        <id property="id" column="id"/>
+        <result property="temNo" column="temNo"/>
+        <result property="temName" column="temName"/>
+        <result property="temType" column="temType"/>
+        <result property="temDiag" column="temDiag"/>
+        <result property="temPermission" column="temPermission"/>
+        <result property="createPerson" column="createPerson"/>
+        <result property="createTime" column="times"/>
+        <result property="description" column="description"/>
+        <result property="emName" column="emName"/>
+    </resultMap>
+
+    <select id="showInfo" resultMap="info">
+        SELECT `id`,`temNo`,`temName`,`temType`,`temDiag`,`temPermission`,p.`createTime` as times,`description`,`emName`,p.`createPerson`
+        FROM `pretemplate` p,`employee` e
+        WHERE p.`createPerson`=e.`eid` AND 1=1
+        <if test="type!='' and type!=null ">
+            AND `temType`=#{type}
+        </if>
+        <if test="permission!='' and permission!=null">
+            AND `temPermission`=#{permission}
+        </if>
+        <if test="code!='' and code!=null">
+            AND `temNo` LIKE CONCAT('%',#{code},'%')
+            OR `temName` LIKE CONCAT('%',#{code},'%')
+        </if>
+        limit #{pageNo},#{pageSize}
+    </select>
+
+    <select id="count" resultType="Integer">
+        SELECT COUNT(`id`) FROM `pretemplate`
+        WHERE 1=1
+        <if test="type!='' and type!=null ">
+            AND `temType`=#{type}
+        </if>
+        <if test="permission!='' and permission!=null">
+            AND `temPermission`=#{permission}
+        </if>
+        <if test="code!='' and code!=null">
+            AND `temNo` LIKE CONCAT('%',#{code},'%')
+            OR `temName` LIKE CONCAT('%',#{code},'%')
+        </if>
+    </select>
+
+
+    <resultMap id="detail" type="cn.presc.entity.West">
+        <id property="id" column="wId"/>
+        <result property="group" column="group"/>
+        <result property="mName" column="mName"/>
+        <result property="single" column="single"/>
+        <result property="uage" column="uage"/>
+        <result property="frequency" column="frequency"/>
+        <result property="day" column="day"/>
+        <result property="total" column="total"/>
+        <result property="mName" column="mName"/>
+        <result property="mSell" column="mSell"/>
+    </resultMap>
+
+    <select id="preteDetailInfo" resultMap="detail">
+        SELECT w.`id` as wId ,`group`,`mName`,`single`,`uage`,`frequency`,`day`,`total`,`mSell`
+        FROM `west`AS w,`medicine` AS m
+        WHERE w.`medicineId`= m.`id`
+        AND w.`pId`=#{pId}
+    </select>
+</mapper>

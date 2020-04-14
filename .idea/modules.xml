@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/bdqnZhengShuo3.iml" filepath="$PROJECT_DIR$/.idea/bdqnZhengShuo3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oauth-cli/oauth-cli.iml" filepath="$PROJECT_DIR$/oauth-cli/oauth-cli.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oauth-resource/oauth-resource.iml" filepath="$PROJECT_DIR$/oauth-resource/oauth-resource.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oauth-server/oauth-server.iml" filepath="$PROJECT_DIR$/oauth-server/oauth-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/prescription/prescription.iml" filepath="$PROJECT_DIR$/prescription/prescription.iml" />
+      <module fileurl="file://$PROJECT_DIR$/reception9007/reception9007.iml" filepath="$PROJECT_DIR$/reception9007/reception9007.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sso-oauth-client/sso-oauth-client.iml" filepath="$PROJECT_DIR$/sso-oauth-client/sso-oauth-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sso-oauth-client2/sso-oauth-client2.iml" filepath="$PROJECT_DIR$/sso-oauth-client2/sso-oauth-client2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/storage/storage.iml" filepath="$PROJECT_DIR$/storage/storage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/utils/utils.iml" filepath="$PROJECT_DIR$/utils/utils.iml" />
+    </modules>
+  </component>
+</project>

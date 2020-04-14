@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>处方模板信息显示</h2>
+<table border="1">
+    <tr><td>序号</td><td>编号</td><td>名称</td><td>种类</td><td>诊断</td><td>权限</td><td>创建时间</td><td>创建人员</td></tr>
+    <tr th:each="p:${infoList}">
+        <td th:text="${p.id}"></td>
+        <td th:text="${p.temNo}"></td>
+        <td th:text="${p.temName}"></td>
+        <td th:text="${p.temType}"></td>
+        <td th:text="${p.temDiag}"></td>
+        <td th:text="${p.temPermission}"></td>
+        <td th:text="${#dates.format(p.createTime,'yyyy-MM-dd')}"></td>
+        <td th:text="${p.emName}"></td>
+    </tr>
+</table>
+</body>
+</html>
